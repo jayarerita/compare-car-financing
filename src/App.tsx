@@ -92,26 +92,28 @@ export default function App() {
 
         {/* Scenarios */}
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="text-xl font-semibold">Scenarios</h2>
               <p className="text-sm text-muted-foreground">
                 Set a car price per scenario to compare different vehicles or deal structures.
               </p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-shrink-0">
               <Button
                 variant="outline"
+                size="sm"
                 onClick={addCashOption}
                 disabled={cashOptions.length + financingOptions.length >= 6}
               >
-                + Cash Option
+                + Cash
               </Button>
               <Button
+                size="sm"
                 onClick={addFinancingOption}
                 disabled={cashOptions.length + financingOptions.length >= 6}
               >
-                + Financing Option
+                + Financing
               </Button>
             </div>
           </div>
